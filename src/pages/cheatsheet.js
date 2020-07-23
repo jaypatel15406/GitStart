@@ -4,14 +4,27 @@ import Code from '../components/syntax'
 
 const CheatSheet = () => (
   <div>
-    <h2>Create &nbsp;<i className="em em-sparkles"></i></h2>
+    <h2>Setting up profile </h2>
     <p>
-      Clone an existing repository
-      <Code code="$ git clone ssh://userdomain.com/repo.git"/>
+      Configuring Username
+      <Code code="$ git config --global user.name \'YOUR_USERNAME\'"/>
     </p>
+    <p>
+      Configuring Email
+      <Code code="$ git config --global user.email YOUR_EMAIL_HERE"/>
+    </p>
+    <p>
+      Checking your Config settings
+      <Code code="$ git config --list"/>
+    </p>
+    <h2>Create &nbsp;<i className="em em-sparkles"></i></h2>
     <p>
       Create a new local repository
       <Code code="$ git init"/>
+    </p>
+    <p>
+      Clone an existing repository
+      <Code code="$ git clone ssh://userdomain.com/repo.git"/>
     </p>
     <h2>Local Changes &nbsp;<i className="em em-house_with_garden"></i></h2>
     <p>
@@ -29,6 +42,10 @@ const CheatSheet = () => (
     <p>
       Commit previously staged changes with message
       <Code code="$ git commit -m 'message'"/>
+    </p>
+    <p>
+      Show Unstage changes between Index file and working directory
+      <Code code="$ git diff"/>
     </p>
     <h2>Commit history &nbsp;<i className="em em-book"></i></h2>
     <p>
@@ -61,6 +78,10 @@ const CheatSheet = () => (
       Publish local changes on a remote
       <Code code="$ git push <remote> <branch>"/>
     </p>
+    <p>
+      Fetch specific Branch, from a repo
+      <Code code="$ git fetch <remote> <branch>"/>
+    </p>
     <h2>Merge and rebase &nbsp;<i className="em em-raised_hands"></i></h2>
     <p>
       Merge branch into your current HEAD
@@ -83,18 +104,9 @@ const CheatSheet = () => (
       Revert a commit
       <Code code="$ git revert <commit>"/>
     </p>
-    <h2>Setting up profile </h2>
     <p>
-      Using username
-      <Code code="$ git config --global user.name \'YOUR_USERNAME\'"/>
-    </p>
-    <p>
-      Using email
-      <Code code="$ git config --global user.email YOUR_EMAIL_HERE"/>
-    </p>
-    <p>
-      Checking you config settings
-      <Code code="$ git config --list"/>
+      Shows which files would be removed from working Directory
+      <Code code="$ git clean -n"/>
     </p>
   </div>
 )
